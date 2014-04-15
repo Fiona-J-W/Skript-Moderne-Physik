@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{scrbook}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc} 
+
+\usepackage{amsmath}
+
+\usepackage[nottoc]{tocbibind}
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+\clubpenalty = 10000
+\widowpenalty = 10000 
+\displaywidowpenalty = 1000
+
+\renewcommand*\contentsname{Inhalt}
+\setcounter{tocdepth}{1}
+
+% \renewcommand{\lo}{×}
+
+\newcommand{\dd}{\ensuremath{\mathrm{d}}}
+\newcommand{\dt}{\ensuremath{\mathrm{d}t}}
+\newcommand{\dx}{\ensuremath{\mathrm{d}x}}
+
+\newcommand{\colvec}[3]{\ensuremath{\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}}}
+
+%opening
+\title{Skriptum zur Vorlesung\\„Moderne Physik“}
+\author{Florian Weber}
+\date{Sommersemester 2014}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+\include{AnalytischeMechanik}
+\include{RelativistischeMechanik}
+\include{Quantenmechanik}
+
+ \backmatter
+
+\end{document}

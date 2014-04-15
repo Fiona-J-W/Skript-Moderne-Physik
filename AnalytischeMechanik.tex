@@ -1,0 +1,75 @@
+\chapter{Analytische Mechanik}
+
+\section{Grundlagen}
+
+\subsection{Freiheitsgrade}
+Freiheitsgrade sind voneinander unabhängige Eigenschaften eines Systems. Beispielsweise hat ein Punkt im Raum drei Freiheitsgrade: Seine $x$-, $y$- und $z$-Koordinate.
+
+Ein System kann beliebig viele Freiheitsgrade enthalten, so können sich etwa mehrere Körper in einem Raum befinden.
+
+\subsection{Bahnkurve}
+Um Bewegung darzustellen nutzen wir Bahnkurven $\vec{r}(t)$, die uns für jeden Zeitpunkt $t$ einen Vector $\vec{r}$ geben, der den Ort zu diesem Zeitpunkt beschreibt.
+
+Die Geschwindigkeit des beobachteten Bahnpunkts ergibt sich nun aus der Ableitung der Bahnkurve nach $t$:
+\begin{equation}
+ v(t) = \frac{\dd v}{\dt} = \dot{\vec{v}}
+\end{equation}
+
+Bewegt sich ein Gegenstand beispielsweise auf folgender Bahnkurve:
+\begin{equation}
+ \vec{r}(t) = \colvec{\sin{t}}{t}{t^2}
+\end{equation}
+
+So ist seine Geschwindigkeit zum Zeitpunkt $t$:
+\begin{equation}
+\vec{v}(t) = \dot{\vec{r}}(t) = \colvec{\cos(t)}{1}{2\cdot t}
+\end{equation}
+
+Die Beschleunigung ist wiederum die Ableitung der Geschwindigkeit:
+\begin{equation}
+ \vec{a} = \dot{\vec{v}} = \ddot{\vec{r}}
+\end{equation}
+
+\subsection{Ableitungen}
+Die Ableitung einer Funktion $f$ ist definiert als:
+\begin{equation}
+ f'(x) = \lim_{\delta \rightarrow 0} \frac{f(x+\delta) - f(x)}{\delta}
+\end{equation}
+
+Für Funktionen der Form $y(z(x))$ ist diese:
+\begin{equation}
+ \frac{\dd y}{\dx} = \frac{\dd y}{\dd z} \frac{\dd z}{\dx}
+\end{equation}
+
+
+Die \emph{partielle Ableitung} einer Funktion $f(x, y, z)$ nach $x$ ist definiert als:
+\begin{equation}
+ \frac{\partial f}{\partial x} = \lim_{\delta \rightarrow 0} \frac{f(x + \delta, y, z) - f(x, y, z)}{\delta}
+\end{equation}
+
+Auf der Anderen Seite gibt es die \emph{totale Ableitung}. Diese sieht für eine Funktion $f(x(t), y(t), z(t), t)$ wie folgt aus:
+\begin{equation}
+\frac{\dd f}{\dx} = 
+  \frac{\partial f}{\partial x} \frac{\dd x}{\dt} + 
+  \frac{\partial f}{\partial y} \frac{\dd y}{\dt} +
+  \frac{\partial f}{\partial z} \frac{\dd z}{\dt} + 
+  \frac{\partial f}{\partial t}
+\end{equation}
+
+\section{Kräfte}
+
+Nach Newtons Bewegungsgleichung ist Masse mal Beschleunigung gleich Kraft:
+\begin{equation}
+ m \cdot a = F
+\end{equation}
+
+Die hier verwendete Masse wird auch als \emph{träge Masse} bezeichnet.
+
+Die von einer Kraft geleistete Arbeit $W$ ist definiert als:
+\begin{equation}
+ W[r, r_0] = \int^r_{r_0} F[r'] \dd r'
+\end{equation}
+
+Anschaulich bedeuted dies, dass die Arbeit um ein Objekt von Punkt $r_0$ nach $r$ zu bringen die Summe aller auf dem Weg dorthin wirkenden Kräfte ist. Gemäß des Energieerhaltungssatzes ist der genau Weg hierfür egal, da ein bestimmter Weg zwar über einen „schwerer“ zu erreichenden Punkt als $r$ gehen könnte, dann allerdings der Rest des Weges insgesammt negative Arbeit benötigen würde.
+
+Hieraus folgt, dass $W[r, r] = 0$, da es keinen Unterschied macht, ob sich $r(t)$ nie ändert, oder ob ein beliebiger, geschlossener Weg gegangen wird. Kräfte die diese Eigenschaft haben werden dementsprechend auch \emph{Konservative Kräfte} genannt.
